@@ -16,4 +16,5 @@ angular.module('shop', [
         .when('/account', {templateUrl: 'partials/account.html'})
         .when('/profile', {redirectTo: '/account'})
         .when('/summary', {templateUrl: 'partials/shop/summary.html'})
+        .when('/order-confirmation', {templateUrl: 'partials/shop/order-confirmation.html'})
 }]);
