@@ -6,7 +6,9 @@ angular.module('shop', [
     'basket',
     'purchase.orders',
     'customer.address',
-    'customer.profile'
+    'customer.profile',
+    'checkpoint.recaptcha',
+    'vcRecaptcha'
 ]).config(['$routeProvider', function($routeProvider) {
     $routeProvider
         .when('/basket', {templateUrl: 'partials/shop/basket.html'})
