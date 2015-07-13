@@ -19,4 +19,12 @@ angular.module('shop', [
         .when('/profile', {redirectTo: '/account'})
         .when('/summary', {templateUrl: 'partials/shop/summary.html'})
         .when('/order-confirmation', {templateUrl: 'partials/shop/order-confirmation.html'})
+        .when('/:locale/basket', {templateUrl: 'partials/shop/basket.html'})
+        .when('/:locale/checkout/address', {templateUrl: 'partials/shop/order-address.html'})
+        .when('/:locale/address/add', {templateUrl: 'partials/address/add-address.html', controller: 'CustomerAddressController'})
+        .when('/:locale/address/:label', {templateUrl: 'partials/address/edit-address.html', controller: 'EditCustomerAddressController'})
+        .when('/:locale/account', {templateUrl: 'partials/account.html'})
+        .when('/:locale/profile', {redirectTo: '/account'})
+        .when('/:locale/summary', {templateUrl: 'partials/shop/summary.html'})
+        .when('/:locale/order-confirmation', {templateUrl: 'partials/shop/order-confirmation.html'})
 }]);
