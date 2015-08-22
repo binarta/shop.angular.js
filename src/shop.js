@@ -1,8 +1,5 @@
 angular.module('shop', [
     'ngRoute',
-    'ngSanitize',
-    'ngAnimate',
-    'ngTouch',
     'basket',
     'purchase.orders',
     'customer.address',
