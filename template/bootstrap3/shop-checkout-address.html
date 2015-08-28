@@ -1,0 +1,193 @@
+<div class="bin-shop" ng-controller="PlacePurchaseOrderController as ppoc">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-5 col-sm-offset-1 col-lg-4 col-lg-offset-2">
+                <div class="panel panel-default panel-profile">
+                    <div class="panel-heading" i18n code="shop.profile.panel.title" read-only>
+                        <i class="fa fa-user fa-fw"></i> {{::var}}
+                        <button class="btn btn-default btn-sm" ng-click="ppoc.updateProfile = true"
+                                ng-hide="ppoc.updateProfile"
+                                i18n code="shop.edit.button" read-only>
+                            <i class="fa fa-pencil fa-fw"></i> {{::var}}
+                        </button>
+                    </div>
+                    <div class="panel-body" ng-controller="AccountMetadataController">
+                        <div class="row">
+                            <div class="col-xs-5 text-right" i18n code="customer.profile.email.label" read-only>
+                                <strong>{{::var}}</strong>
+                            </div>
+                            <div class="col-xs-7">
+                                {{::metadata.email}}
+                            </div>
+                        </div>
+                        <div ng-controller="CustomerProfileController" ng-init="init()">
+                            <div class="row" ng-if="!ppoc.updateProfile">
+                                <div class="col-xs-5 text-right" i18n code="customer.profile.vat.label" read-only>
+                                    <strong>{{::var}}</strong>
+                                </div>
+                                <div class="col-xs-7">
+                                    {{vat}}
+                                </div>
+                            </div>
+                            <form class="form-horizontal" name="customerProfileForm"
+                                  ng-submit="submit(); ppoc.updateProfile = false;" ng-if="ppoc.updateProfile">
+                                <div class="form-group" ng-class="{'has-error': violations.vat}">
+                                    <label class="control-label col-xs-5 text-right" for="vat"
+                                           i18n code="customer.profile.vat.label" read-only>
+                                        {{var}}
+                                    </label>
+
+                                    <div class="col-xs-7">
+                                        <input id="vat" class="form-control" ng-model="$parent.vat"
+                                               placeholder="BE1234">
+
+                                        <p class="help-block" i18n code="customer.profile.vat.info">
+                                            <small><i class="fa fa-info-circle fa-fw"></i> {{var}}</small>
+                                        </p>
+
+                                        <p class="help-block" ng-repeat="v in violations.vat"
+                                           i18n code="customer.profile.vat.{{v}}" default="VAT {{v}}" read-only>
+                                            {{var}}
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-xs-12">
+                                        <div class="pull-right">
+                                            <button type="submit" class="btn btn-success"
+                                                    ng-disabled="working || customerProfileForm.$pristine">
+                                                        <span ng-show="working"><i
+                                                                class="fa fa-spinner fa-spin fa-fw"></i></span>
+                                                <span ng-hide="working"><i class="fa fa-check fa-fw"></i></span>
+                                                <span class="inline" i18n code="shop.save.button">{{var}}</span>
+                                            </button>
+                                            <button type="reset" class="btn btn-default"
+                                                    ng-click="init(); ppoc.updateProfile = false" ng-disabled="working">
+                                                <i class="fa fa-times fa-fw"></i>
+                                                <span class="inline" i18n code="shop.cancel.button">{{var}}</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div ng-controller="CustomerAddressController" ng-init="init()">
+            <div ng-if="addresses"
+                 ng-controller="AddressSelectionController as selection"
+                 ng-init="selection.init({type: 'shipping', addresses: addresses});selection.init({type: 'billing', addresses: addresses});">
+
+                <div class="row">
+                    <div class="col-xs-12 col-sm-5 col-sm-offset-1 col-lg-4 col-lg-offset-2">
+                        <div class="panel panel-default">
+                            <div class="panel-heading" i18n code="shop.billing.address.panel.title" read-only>
+                                <i class="fa fa-home fa-fw"></i> {{::var}}
+                                <a ng-href="#!{{::localePrefix}}/address/add?&redirectTo={{::unlocalizedPath}}"
+                                   ng-if="addresses.length > 0"
+                                   class="btn btn-default btn-sm" i18n code="shop.new.button" read-only>
+                                    <i class="fa fa-plus fa-fw"></i> {{::var}}
+                                </a>
+                            </div>
+                            <div class="panel-body">
+                                <form ng-if="!ppoc.updateAddress">
+                                    <div class="form-group text-center" ng-if="addresses.length == 0">
+                                        <a ng-href="#!{{::localePrefix}}/address/add?&redirectTo={{::unlocalizedPath}}"
+                                           class="btn btn-default" i18n code="shop.new.address.button" read-only>
+                                            <i class="fa fa-plus fa-fw"></i> {{::var}}
+                                        </a>
+                                    </div>
+                                    <div class="form-group" ng-if="addresses.length > 0">
+                                        <select class="form-control" ng-model="selection.billing.label"
+                                                ng-options="a.label as a.label for a in addresses">
+                                        </select>
+                                    </div>
+                                    <div class="form-group"
+                                         ng-repeat="address in addresses | filter:{label:selection.billing.label}:true">
+                                        <hr>
+                                        <a class="btn btn-default btn-sm pull-right"
+                                           ng-href="#!{{::localePrefix}}/address/{{::address.label}}?redirectTo={{::unlocalizedPath}}"
+                                           i18n code="shop.edit.button" read-only>
+                                            <i class="fa fa-pencil fa-fw"></i> {{::var}}
+                                        </a>
+
+                                        <address>
+                                            <strong>{{::address.addressee}}</strong><br>
+                                            {{::address.street}} {{::address.number}}<br>
+                                            {{::address.zip}} {{::address.city}}<br>
+                                            {{::address.country | toCountryName}}
+                                        </address>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xs-12 col-sm-5 col-lg-4">
+                        <div class="panel panel-default">
+                            <div class="panel-heading"
+                                 i18n code="shop.shipping.address.panel.title" read-only>
+                                <i class="fa fa-home fa-fw"></i> {{::var}}
+                                <a ng-href="#!{{::localePrefix}}/address/add?&redirectTo={{::unlocalizedPath}}"
+                                   ng-if="addresses.length > 0"
+                                   class="btn btn-default btn-sm" i18n code="shop.new.button" read-only>
+                                    <i class="fa fa-plus fa-fw"></i> {{::var}}
+                                </a>
+                            </div>
+                            <div class="panel-body">
+                                <form>
+                                    <div class="form-group text-center" ng-if="addresses.length == 0">
+                                        <a ng-href="#!{{::localePrefix}}/address/add?&redirectTo={{::unlocalizedPath}}"
+                                           class="btn btn-default" i18n code="shop.new.address.button" read-only>
+                                            <i class="fa fa-plus fa-fw"></i> {{::var}}
+                                        </a>
+                                    </div>
+                                    <div class="form-group" ng-if="addresses.length > 0">
+                                        <select class="form-control" ng-model="selection.shipping.label"
+                                                ng-options="a.label as a.label for a in addresses">
+                                        </select>
+                                    </div>
+                                    <div class="form-group"
+                                         ng-repeat="address in addresses | filter:{label:selection.shipping.label}:true">
+                                        <hr>
+                                        <a class="btn btn-default btn-sm pull-right"
+                                           ng-href="#!{{::localePrefix}}/address/{{::address.label}}?redirectTo={{::unlocalizedPath}}"
+                                           i18n code="shop.edit.button" read-only>
+                                            <i class="fa fa-pencil fa-fw"></i> {{::var}}
+                                        </a>
+                                        <address>
+                                            <strong>{{::address.addressee}}</strong><br>
+                                            {{::address.street}} {{::address.number}}<br>
+                                            {{::address.zip}} {{::address.city}}<br>
+                                            {{::address.country | toCountryName}}
+                                        </address>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-lg-8 col-lg-offset-2">
+                        <hr>
+                        <a ng-href="#!{{localePrefix}}/basket" class="btn btn-default"
+                           i18n code="shop.back.button" read-only>
+                            <i class="fa fa-caret-left fa-fw"></i> {{::var}}
+                        </a>
+
+                        <button class="btn btn-success pull-right"
+                                i18n code="shop.continue.button" read-only
+                                ng-click="selection.proceed({redirectTo: '/summary'})"
+                                ng-disabled="!selection.isValid() || ppoc.updateProfile">
+                            <i class="fa fa-caret-right fa-fw"></i> {{::var}}
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

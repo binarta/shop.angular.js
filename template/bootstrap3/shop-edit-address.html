@@ -1,0 +1,43 @@
+<div class="bin-shop">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
+                <div class="panel panel-default panel-address">
+                    <div class="panel-heading">
+                        <h3 class="panel-title inline" i18n code="shop.edit.address.title" read-only>
+                            <i class="fa fa-home fa-fw"></i> {{::var}}
+                        </h3>
+                    </div>
+                    <div class="panel-body">
+                        <form name="editCustomerAddressForm"
+                              ng-controller="EditCustomerAddressController"
+                              ng-init="init()"
+                              ng-submit="submit({generateLabel: true})">
+
+                            <ng-include src="'bin-customer-address-form-groups.html'"></ng-include>
+
+                            <div class="form-group">
+                                <div class="pull-right">
+                                    <button type="submit" class="btn btn-success"
+                                            ng-disabled="working || editCustomerAddressForm.$pristine"
+                                            i18n code="shop.save.button" read-only>
+                                        <span ng-show="working"><i class="fa fa-spinner fa-spin fa-fw"></i></span>
+                                        <span ng-hide="working"><i class="fa fa-check fa-fw"></i></span>
+                                        {{::var}}
+                                    </button>
+
+                                    <button type="button" class="btn btn-default" ng-click="cancel()"
+                                            ng-disabled="working"
+                                            i18n code="shop.cancel.button" read-only>
+                                        <i class="fa fa-times fa-fw"></i>
+                                        {{::var}}
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

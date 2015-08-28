@@ -3,15 +3,17 @@ angular.module('shop', [
     'basket',
     'purchase.orders',
     'customer.address',
+    'customer.address.templates',
     'customer.profile',
     'checkpoint.recaptcha',
-    'vcRecaptcha'
+    'vcRecaptcha',
+    'shop.templates'
 ]).config(['$routeProvider', function($routeProvider) {
     $routeProvider
         .when('/basket', {templateUrl: 'partials/shop/basket.html'})
         .when('/checkout/address', {templateUrl: 'partials/shop/order-address.html'})
-        .when('/address/add', {templateUrl: 'partials/address/add-address.html', controller: 'CustomerAddressController'})
-        .when('/address/:label', {templateUrl: 'partials/address/edit-address.html', controller: 'EditCustomerAddressController'})
+        .when('/address/add', {templateUrl: 'partials/address/add-address.html'})
+        .when('/address/:label', {templateUrl: 'partials/address/edit-address.html'})
         .when('/account', {templateUrl: 'partials/account.html'})
         .when('/profile', {redirectTo: '/account'})
         .when('/summary', {templateUrl: 'partials/shop/summary.html'})
@@ -21,8 +23,8 @@ angular.module('shop', [
         .when('/admin/order/:owner/:id', {templateUrl: 'partials/shop/order-details.html', controller: 'ViewPurchaseOrderController'})
         .when('/:locale/basket', {templateUrl: 'partials/shop/basket.html'})
         .when('/:locale/checkout/address', {templateUrl: 'partials/shop/order-address.html'})
-        .when('/:locale/address/add', {templateUrl: 'partials/address/add-address.html', controller: 'CustomerAddressController'})
-        .when('/:locale/address/:label', {templateUrl: 'partials/address/edit-address.html', controller: 'EditCustomerAddressController'})
+        .when('/:locale/address/add', {templateUrl: 'partials/address/add-address.html'})
+        .when('/:locale/address/:label', {templateUrl: 'partials/address/edit-address.html'})
         .when('/:locale/account', {templateUrl: 'partials/account.html'})
         .when('/:locale/profile', {redirectTo: '/account'})
         .when('/:locale/summary', {templateUrl: 'partials/shop/summary.html'})

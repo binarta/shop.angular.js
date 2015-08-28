@@ -1,6 +1,11 @@
 {
   "name": "binarta.shop.angular",
-  "main": "./src/shop.js",
+  "main": [
+    "./src/shop.js",
+    "./src/shop-tpls-bootstrap3.js",
+    "./metadata-system.json",
+    "./less/shop.less"
+  ],
   "dependencies": {
     "angular": "1.3.*",
     "angular-route": "1.3.*",
