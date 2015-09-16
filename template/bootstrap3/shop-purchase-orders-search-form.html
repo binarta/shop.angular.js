@@ -1,0 +1,23 @@
+<div checkpoint-permission-for="purchase.order.find.all">
+    <section id="search" ng-if="::permitted">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
+                    <form class="form-search" ng-submit="searchCtrl.search()">
+                        <div class="input-group input-group-lg">
+                            <input type="text" class="form-control" ng-model="searchCtrl.filters.owner"
+                                   i18n code="shop.orders.search.by.owner.placeholder"
+                                   default="Search orders by user" read-only placeholder="{{::var}}">
+
+                            <div class="input-group-btn">
+                                <button class="btn btn-primary" type="submit" ng-disabled="searchCtrl.working">
+                                    <i class="fa fa-search"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>

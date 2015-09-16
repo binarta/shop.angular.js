@@ -1,0 +1,30 @@
+<section id="breadcrumb">
+    <div class="container">
+        <div class="row" ng-if="!viewOrderCtrl">
+            <ol class="breadcrumb" ng-if="!viewport.xs">
+                <li i18n code="shop.order.history.title" read-only>
+                    {{::var}}
+                </li>
+            </ol>
+        </div>
+        <div class="row" ng-if="viewOrderCtrl">
+            <ol class="breadcrumb" ng-if="viewport.xs">
+                <li>
+                    <a ng-href="#!{{::localePrefix}}/order-history" i18n code="shop.order.history.title" read-only>
+                        <i class="fa fa-angle-left fa-fw"></i> {{::var}}
+                    </a>
+                </li>
+            </ol>
+            <ol class="breadcrumb" ng-if="!viewport.xs">
+                <li>
+                    <a ng-href="#!{{::localePrefix}}/order-history" i18n code="shop.order.history.title" read-only>
+                        {{::var}}
+                    </a>
+                </li>
+                <li i18n code="shop.order.details.title" read-only>
+                    {{::var}}
+                </li>
+            </ol>
+        </div>
+    </div>
+</section>

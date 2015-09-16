@@ -1,0 +1,45 @@
+<div class="panel panel-default">
+    <div class="panel-heading">
+        {{::item.creationTime | amDateFormat:'DD-MM-YYYY'}} | {{::item.creationTime | amDateFormat:'HH:mm'}}
+        <a class="btn btn-default btn-sm" ng-href="#!{{::localePrefix}}/order/{{::item.owner}}/{{::item.id}}"
+           i18n code="shop.order.view.details.button" read-only>
+            <i class="fa fa-list fa-fw"></i> {{::var}}
+        </a>
+    </div>
+    <div class="panel-body" checkpoint-permission-for="purchase.order.find.all">
+        <div class="row panel-row">
+            <div class="col-xs-4">
+                <label i18n code="shop.order.reference.label" read-only ng-bind="::var"></label>
+            </div>
+            <div class="col-xs-8">
+                <a ng-href="#!{{::localePrefix}}/order/{{::item.owner}}/{{::item.id}}">
+                    {{::item.id | limitTo:8}}
+                </a>
+            </div>
+        </div>
+        <div class="row panel-row" ng-if="permitted">
+            <div class="col-xs-4">
+                <label i18n code="shop.order.user.label" read-only ng-bind="::var"></label>
+            </div>
+            <div class="col-xs-8">
+                {{::item.email}}
+            </div>
+        </div>
+        <div class="row panel-row">
+            <div class="col-xs-4">
+                <label i18n code="shop.order.total.label" read-only ng-bind="::var"></label>
+            </div>
+            <div class="col-xs-8">
+                {{::item.total / 100 | currency}}
+            </div>
+        </div>
+        <div class="row panel-row">
+            <div class="col-xs-4">
+                <label i18n code="shop.order.status.label" read-only ng-bind="::var"></label>
+            </div>
+            <div class="col-xs-8">
+                <purchase-order-status order="item"></purchase-order-status>
+            </div>
+        </div>
+    </div>
+</div>

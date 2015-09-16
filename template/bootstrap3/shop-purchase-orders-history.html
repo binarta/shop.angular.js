@@ -1,0 +1,41 @@
+<div class="bin-shop"
+     ng-init="searchCtrl.init({
+            entity: 'purchase-order',
+            context:'findAll',
+            filters: {
+                sortings: [
+                    {on:'creationTime', orientation:'desc'}
+                ]
+            },
+            autosearch:true,
+            subset: {count: 10},
+            noMoreResultsNotification: false
+        })">
+    <div class="container">
+        <div class="row" ng-if="searchCtrl.results == 0 && !searchCtrl.working">
+            <div class="col-xs-12">
+                <div class="alert alert-info" i18n code="shop.order.history.empty.message" read-only>
+                    <i class="fa fa-info-circle fa-fw"></i> {{::var}}
+                </div>
+            </div>
+        </div>
+
+        <div ng-if="viewport.xs || viewport.sm">
+            <div class="row" ng-repeat="item in searchCtrl.results track by item.id">
+                <div class="col-xs-12">
+                    <ng-include src="'shop-purchase-orders-panel-preview.html'"></ng-include>
+                </div>
+            </div>
+        </div>
+        <div ng-if="viewport.md || viewport.lg">
+            <div bin-split-in-rows="searchCtrl.results" columns="2">
+                <div class="row" ng-repeat="row in rows track by row.id">
+                    <div class="col-md-6" ng-repeat="item in row.items track by item.id">
+                        <ng-include src="'shop-purchase-orders-panel-preview.html'"></ng-include>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <ng-include src="'catalog-search-more-button.html'"></ng-include>
+    </div>
+</div>

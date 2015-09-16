@@ -34,7 +34,20 @@
       "shop.page.coming.soon.message": "This page will be available soon.",
       "shop.order.confirmed.panel.title": "Thank you for your order!",
       "shop.order.confirmed.message": "We will send all payment details to your e-mail address as soon as possible.",
-      "shop.order.confirmed.communication.message": "We will use this e-mail address to contact you:"
+      "shop.order.confirmed.communication.message": "We will use this e-mail address to contact you:",
+      "shop.order.view.details.button": "View order details",
+      "shop.order.date.label": "Date",
+      "shop.order.reference.label": "Reference",
+      "shop.order.user.label": "User",
+      "shop.order.vat.label": "VAT",
+      "shop.order.total.label": "Total",
+      "shop.order.status.label": "Status",
+      "shop.order.payment.method.label": "Payment method",
+      "shop.address.view.on.map.button": "View on map",
+      "shop.order.history.empty.message": "No orders found.",
+      "shop.order.support.panel.title": "How can we help you?",
+      "shop.order.support.form.send.button": "Send message",
+      "shop.order.support.form.sent.message": "Thank you for your message. We'll get back to you as soon as possible."
     }, "en":{
       "shop.basket.title": "Basket",
       "shop.add.address.title": "Add address",
@@ -69,7 +82,20 @@
       "shop.page.coming.soon.message": "This page will be available soon.",
       "shop.order.confirmed.panel.title": "Thank you for your order!",
       "shop.order.confirmed.message": "We will send all payment details to your e-mail address as soon as possible.",
-      "shop.order.confirmed.communication.message": "We will use this e-mail address to contact you:"
+      "shop.order.confirmed.communication.message": "We will use this e-mail address to contact you:",
+      "shop.order.view.details.button": "View order details",
+      "shop.order.date.label": "Date",
+      "shop.order.reference.label": "Reference",
+      "shop.order.user.label": "User",
+      "shop.order.vat.label": "VAT",
+      "shop.order.total.label": "Total",
+      "shop.order.status.label": "Status",
+      "shop.order.payment.method.label": "Payment method",
+      "shop.address.view.on.map.button": "View on map",
+      "shop.order.history.empty.message": "No orders found.",
+      "shop.order.support.panel.title": "How can we help you?",
+      "shop.order.support.form.send.button": "Send message",
+      "shop.order.support.form.sent.message": "Thank you for your message. We'll get back to you as soon as possible."
     }, "fr":{
       "shop.basket.title": "Basket",
       "shop.add.address.title": "Add address",
@@ -104,7 +130,20 @@
       "shop.page.coming.soon.message": "This page will be available soon.",
       "shop.order.confirmed.panel.title": "Thank you for your order!",
       "shop.order.confirmed.message": "We will send all payment details to your e-mail address as soon as possible.",
-      "shop.order.confirmed.communication.message": "We will use this e-mail address to contact you:"
+      "shop.order.confirmed.communication.message": "We will use this e-mail address to contact you:",
+      "shop.order.view.details.button": "View order details",
+      "shop.order.date.label": "Date",
+      "shop.order.reference.label": "Reference",
+      "shop.order.user.label": "User",
+      "shop.order.vat.label": "VAT",
+      "shop.order.total.label": "Total",
+      "shop.order.status.label": "Status",
+      "shop.order.payment.method.label": "Payment method",
+      "shop.address.view.on.map.button": "View on map",
+      "shop.order.history.empty.message": "No orders found.",
+      "shop.order.support.panel.title": "How can we help you?",
+      "shop.order.support.form.send.button": "Send message",
+      "shop.order.support.form.sent.message": "Thank you for your message. We'll get back to you as soon as possible."
     }, "de":{
       "shop.basket.title": "Basket",
       "shop.add.address.title": "Add address",
@@ -139,7 +178,20 @@
       "shop.page.coming.soon.message": "This page will be available soon.",
       "shop.order.confirmed.panel.title": "Thank you for your order!",
       "shop.order.confirmed.message": "We will send all payment details to your e-mail address as soon as possible.",
-      "shop.order.confirmed.communication.message": "We will use this e-mail address to contact you:"
+      "shop.order.confirmed.communication.message": "We will use this e-mail address to contact you:",
+      "shop.order.view.details.button": "View order details",
+      "shop.order.date.label": "Date",
+      "shop.order.reference.label": "Reference",
+      "shop.order.user.label": "User",
+      "shop.order.vat.label": "VAT",
+      "shop.order.total.label": "Total",
+      "shop.order.status.label": "Status",
+      "shop.order.payment.method.label": "Payment method",
+      "shop.address.view.on.map.button": "View on map",
+      "shop.order.history.empty.message": "No orders found.",
+      "shop.order.support.panel.title": "How can we help you?",
+      "shop.order.support.form.send.button": "Send message",
+      "shop.order.support.form.sent.message": "Thank you for your message. We'll get back to you as soon as possible."
     }
   }
 }
