@@ -1,0 +1,97 @@
+<div class="bin-shop">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-5 col-sm-offset-1 col-lg-4 col-lg-offset-2">
+                <div class="panel panel-default panel-profile">
+                    <div class="panel-heading" i18n code="shop.profile.panel.title" read-only>
+                        <i class="fa fa-user fa-fw"></i> {{::var}}
+                    </div>
+                    <div class="panel-body" ng-controller="CustomerProfileController" ng-init="init()">
+                        <form name="customerProfileForm" ng-submit="submit(); customerProfileForm.$setPristine();">
+                            <div class="form-group" ng-controller="AccountMetadataController">
+                                <label i18n code="customer.profile.email.label" read-only ng-bind="::var"></label>
+                                <div>{{::metadata.email}}</div>
+                                <hr>
+                            </div>
+                            <div class="form-group">
+                                <label i18n code="checkpoint.password.label" read-only ng-bind="::var"></label>
+                                <div>
+                                    <a ng-href="#!{{::localePrefix}}/changemypassword" i18n code="checkpoint.change.password.title" read-only>{{::var}}</a>
+                                </div>
+                                <hr>
+                            </div>
+                            <div class="form-group" ng-class="{'has-error': violations.vat}">
+                                <label for="vat" i18n code="customer.profile.vat.label" read-only ng-bind="::var"></label>
+                                <input id="vat" class="form-control" ng-model="vat">
+                                <p class="help-block" i18n code="customer.profile.vat.info" read-only>
+                                    <small><i class="fa fa-info-circle fa-fw"></i> {{::var}}</small>
+                                </p>
+                                <p class="help-block" ng-repeat="v in violations.vat"
+                                   i18n code="customer.profile.vat.{{::v}}" default="VAT {{::v}}" read-only>
+                                    {{::var}}
+                                </p>
+                            </div>
+                            <button type="submit" class="btn btn-success" ng-disabled="working || customerProfileForm.$pristine">
+                                <span ng-show="working"><i class="fa fa-spinner fa-spin fa-fw"></i></span>
+                                <span ng-hide="working"><i class="fa fa-check fa-fw"></i></span>
+                                <span class="inline" i18n code="shop.save.button" read-only>{{::var}}</span>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-5 col-lg-4">
+                <div class="panel panel-default" ng-controller="CustomerAddressController" ng-init="init()">
+                    <div class="panel-heading" i18n code="shop.addresses.panel.title" read-only>
+                        <i class="fa fa-home fa-fw"></i> {{::var}}
+                        <a ng-href="#!{{::localePrefix}}/address/add?&redirectTo={{::unlocalizedPath}}"
+                           ng-if="addresses.length > 0"
+                           class="btn btn-default btn-sm" i18n code="shop.new.button" read-only>
+                            <i class="fa fa-plus fa-fw"></i> {{::var}}
+                        </a>
+                    </div>
+                    <div class="panel-body">
+                        <form name="addressForm">
+                            <div class="form-group text-center" ng-if="addresses.length == 0">
+                                <a ng-href="#!{{::localePrefix}}/address/add?&redirectTo={{::unlocalizedPath}}"
+                                   class="btn btn-default" i18n code="shop.new.address.button" read-only>
+                                    <i class="fa fa-plus fa-fw"></i> {{::var}}
+                                </a>
+                            </div>
+                            <div ng-if="addresses.length > 0" ng-init="addressForm.selectedAddressLabel = addresses[0].label">
+                                <div class="form-group" ng-if="addresses.length > 1">
+                                    <select class="form-control" ng-model="addressForm.selectedAddressLabel"
+                                            ng-options="a.label as a.label for a in addresses">
+                                    </select>
+                                    <hr>
+                                </div>
+                                <div class="form-group" ng-repeat="address in addresses | filter:{label:addressForm.selectedAddressLabel}:true">
+
+                                    <div class="btn-group-vertical pull-right">
+                                        <button type="button" class="btn btn-danger btn-sm"
+                                                ng-click="remove(address.label); addressForm.selectedAddressLabel = addresses.length > 1 ? addresses[0].label : '';"
+                                                i18n code="shop.delete.button" read-only>
+                                            <i class="fa fa-times fa-fw"></i> {{::var}}
+                                        </button>
+                                        <a class="btn btn-default btn-sm"
+                                           ng-href="#!{{::localePrefix}}/address/{{::address.label}}?redirectTo={{::unlocalizedPath}}"
+                                           i18n code="shop.edit.button" read-only>
+                                            <i class="fa fa-pencil fa-fw"></i> {{::var}}
+                                        </a>
+                                    </div>
+
+                                    <address>
+                                        <strong>{{::address.addressee}}</strong><br>
+                                        {{::address.street}} {{::address.number}}<br>
+                                        {{::address.zip}} {{::address.city}}<br>
+                                        {{::address.country | toCountryName}}
+                                    </address>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
