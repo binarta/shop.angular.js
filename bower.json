@@ -4,7 +4,8 @@
     "./src/shop.js",
     "./src/shop-tpls-bootstrap3.js",
     "./metadata-system.json",
-    "./less/shop.less"
+    "./less/shop.less",
+    "./sources.json"
   ],
   "dependencies": {
     "angular": "1.3.*",
