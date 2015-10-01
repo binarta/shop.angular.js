@@ -7,6 +7,7 @@ angular.module('shop', [
     'customer.profile',
     'checkpoint.recaptcha',
     'vcRecaptcha',
+    'truncate',
     'shop.templates'
 ]).config(['$routeProvider', function($routeProvider) {
     $routeProvider
