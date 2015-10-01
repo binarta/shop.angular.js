@@ -13,6 +13,7 @@
     "customer.address.templates": "bower_components/binarta.customer.address/src/main/js/customer.address-tpls-bootstrap3.js",
     "customer.profile": "bower_components/binarta.customer.profile.angular/src/main/customer.profile.js",
     "checkpoint.recaptcha":"bower_components/binarta.checkpoint.recaptcha.angular/src/checkpoint.recaptcha.js",
-    "angular.recaptcha":"bower_components/angular-recaptcha/release/angular-recaptcha.min.js"
+    "angular.recaptcha":"bower_components/angular-recaptcha/release/angular-recaptcha.min.js",
+    "angular-truncate": "bower_components/angular-truncate/src/truncate.js"
   }
 }
