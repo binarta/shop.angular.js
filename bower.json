@@ -20,8 +20,7 @@
     "binarta.customer.address":"v0.*.*",
     "binarta.customer.profile.angular": "v0.*.*",
     "binarta.checkpoint.recaptcha.angular": "v0.*.*",
-    "angular-recaptcha": "v0.0.7",
-    "angular-truncate": "*"
+    "angular-recaptcha": "v0.0.7"
   },
   "ignore": [
     "**/.*",
