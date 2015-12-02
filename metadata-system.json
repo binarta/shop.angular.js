@@ -48,7 +48,6 @@
       "shop.order.status.label": "Status",
       "shop.order.payment.method.label": "Payment method",
       "shop.address.view.on.map.button": "View on map",
-      "shop.order.history.empty.message": "No orders found.",
       "shop.order.support.panel.title": "How can we help you?",
       "shop.order.support.form.send.button": "Send message",
       "shop.order.support.form.sent.message": "Thank you for your message. We'll get back to you as soon as possible."
@@ -100,7 +99,6 @@
       "shop.order.status.label": "Status",
       "shop.order.payment.method.label": "Payment method",
       "shop.address.view.on.map.button": "View on map",
-      "shop.order.history.empty.message": "No orders found.",
       "shop.order.support.panel.title": "How can we help you?",
       "shop.order.support.form.send.button": "Send message",
       "shop.order.support.form.sent.message": "Thank you for your message. We'll get back to you as soon as possible."
@@ -152,7 +150,6 @@
       "shop.order.status.label": "Status",
       "shop.order.payment.method.label": "Payment method",
       "shop.address.view.on.map.button": "View on map",
-      "shop.order.history.empty.message": "No orders found.",
       "shop.order.support.panel.title": "How can we help you?",
       "shop.order.support.form.send.button": "Send message",
       "shop.order.support.form.sent.message": "Thank you for your message. We'll get back to you as soon as possible."
@@ -204,7 +201,6 @@
       "shop.order.status.label": "Status",
       "shop.order.payment.method.label": "Payment method",
       "shop.address.view.on.map.button": "View on map",
-      "shop.order.history.empty.message": "No orders found.",
       "shop.order.support.panel.title": "How can we help you?",
       "shop.order.support.form.send.button": "Send message",
       "shop.order.support.form.sent.message": "Thank you for your message. We'll get back to you as soon as possible."

@@ -12,14 +12,6 @@
             noMoreResultsNotification: false
         })">
     <div class="container">
-        <div class="row" ng-if="searchCtrl.results == 0 && !searchCtrl.working">
-            <div class="col-xs-12">
-                <div class="alert alert-info" i18n code="shop.order.history.empty.message" read-only>
-                    <i class="fa fa-info-circle fa-fw"></i> {{::var}}
-                </div>
-            </div>
-        </div>
-
         <div ng-if="viewport.xs || viewport.sm">
             <div class="row" ng-repeat="item in searchCtrl.results track by item.id">
                 <div class="col-xs-12">
@@ -36,6 +28,6 @@
                 </div>
             </div>
         </div>
-        <ng-include src="'catalog-search-more-button.html'"></ng-include>
+        <ng-include src="'search-for-more.html'"></ng-include>
     </div>
 </div>
