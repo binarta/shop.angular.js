@@ -34,6 +34,8 @@
       "shop.basket.panel.title": "Basket",
       "shop.payment.wire.transfer.restriction.title": "Payment by wire transfer",
       "shop.payment.wire.transfer.restriction.message": "After confirming your order we will send all payment details to your e-mail address as soon as possible.",
+      "shop.payment.paypal.restriction.title": "Payment via PayPal",
+      "shop.payment.paypal.restriction.message": "After confirming your order you will be redirect to PayPal to complete payment of your order.",
       "shop.confirm.terms.message": "By clicking confirm, you agree to the terms and conditions.",
       "shop.page.coming.soon.message": "This page will be available soon.",
       "shop.order.confirmed.panel.title": "Thank you for your order!",
@@ -50,7 +52,12 @@
       "shop.address.view.on.map.button": "View on map",
       "shop.order.support.panel.title": "How can we help you?",
       "shop.order.support.form.send.button": "Send message",
-      "shop.order.support.form.sent.message": "Thank you for your message. We'll get back to you as soon as possible."
+      "shop.order.support.form.sent.message": "Thank you for your message. We'll get back to you as soon as possible.",
+      "shop.paypal.setup.subject.label":"PayPal ID",
+      "shop.payment.provider.permission.approved.title": "Completing payment integration setup!",
+      "shop.approve.payment.title": "Redirecting to payment provider!",
+      "shop.payment.approved.title": "Finalizing your order!",
+      "shop.payment.canceled.title": "Canceling your order!"
     }, "en":{
       "shop.basket.title": "Basket",
       "shop.checkout.address.title": "Address selection",
@@ -85,6 +92,8 @@
       "shop.basket.panel.title": "Basket",
       "shop.payment.wire.transfer.restriction.title": "Payment by wire transfer",
       "shop.payment.wire.transfer.restriction.message": "After confirming your order we will send all payment details to your e-mail address as soon as possible.",
+      "shop.payment.paypal.restriction.title": "Payment via PayPal",
+      "shop.payment.paypal.restriction.message": "After confirming your order you will be redirect to PayPal to complete payment of your order.",
       "shop.confirm.terms.message": "By clicking confirm, you agree to the terms and conditions.",
       "shop.page.coming.soon.message": "This page will be available soon.",
       "shop.order.confirmed.panel.title": "Thank you for your order!",
@@ -101,7 +110,12 @@
       "shop.address.view.on.map.button": "View on map",
       "shop.order.support.panel.title": "How can we help you?",
       "shop.order.support.form.send.button": "Send message",
-      "shop.order.support.form.sent.message": "Thank you for your message. We'll get back to you as soon as possible."
+      "shop.order.support.form.sent.message": "Thank you for your message. We'll get back to you as soon as possible.",
+      "shop.paypal.setup.subject.label":"PayPal ID",
+      "shop.payment.provider.permission.approved.title": "Completing payment integration setup!",
+      "shop.approve.payment.title": "Redirecting to payment provider!",
+      "shop.payment.approved.title": "Finalizing your order!",
+      "shop.payment.canceled.title": "Canceling your order!"
     }, "fr":{
       "shop.basket.title": "Basket",
       "shop.checkout.address.title": "Address selection",
@@ -136,6 +150,8 @@
       "shop.basket.panel.title": "Basket",
       "shop.payment.wire.transfer.restriction.title": "Payment by wire transfer",
       "shop.payment.wire.transfer.restriction.message": "After confirming your order we will send all payment details to your e-mail address as soon as possible.",
+      "shop.payment.paypal.restriction.title": "Payment via PayPal",
+      "shop.payment.paypal.restriction.message": "After confirming your order you will be redirect to PayPal to complete payment of your order.",
       "shop.confirm.terms.message": "By clicking confirm, you agree to the terms and conditions.",
       "shop.page.coming.soon.message": "This page will be available soon.",
       "shop.order.confirmed.panel.title": "Thank you for your order!",
@@ -152,7 +168,12 @@
       "shop.address.view.on.map.button": "View on map",
       "shop.order.support.panel.title": "How can we help you?",
       "shop.order.support.form.send.button": "Send message",
-      "shop.order.support.form.sent.message": "Thank you for your message. We'll get back to you as soon as possible."
+      "shop.order.support.form.sent.message": "Thank you for your message. We'll get back to you as soon as possible.",
+      "shop.paypal.setup.subject.label":"PayPal ID",
+      "shop.payment.provider.permission.approved.title": "Completing payment integration setup!",
+      "shop.approve.payment.title": "Redirecting to payment provider!",
+      "shop.payment.approved.title": "Finalizing your order!",
+      "shop.payment.canceled.title": "Canceling your order!"
     }, "de":{
       "shop.basket.title": "Basket",
       "shop.checkout.address.title": "Address selection",
@@ -187,6 +208,8 @@
       "shop.basket.panel.title": "Basket",
       "shop.payment.wire.transfer.restriction.title": "Payment by wire transfer",
       "shop.payment.wire.transfer.restriction.message": "After confirming your order we will send all payment details to your e-mail address as soon as possible.",
+      "shop.payment.paypal.restriction.title": "Payment via PayPal",
+      "shop.payment.paypal.restriction.message": "After confirming your order you will be redirect to PayPal to complete payment of your order.",
       "shop.confirm.terms.message": "By clicking confirm, you agree to the terms and conditions.",
       "shop.page.coming.soon.message": "This page will be available soon.",
       "shop.order.confirmed.panel.title": "Thank you for your order!",
@@ -203,7 +226,12 @@
       "shop.address.view.on.map.button": "View on map",
       "shop.order.support.panel.title": "How can we help you?",
       "shop.order.support.form.send.button": "Send message",
-      "shop.order.support.form.sent.message": "Thank you for your message. We'll get back to you as soon as possible."
+      "shop.order.support.form.sent.message": "Thank you for your message. We'll get back to you as soon as possible.",
+      "shop.paypal.setup.subject.label":"PayPal ID",
+      "shop.payment.provider.permission.approved.title": "Completing payment integration setup!",
+      "shop.approve.payment.title": "Redirecting to payment provider!",
+      "shop.payment.approved.title": "Finalizing your order!",
+      "shop.payment.canceled.title": "Canceling your order!"
     }
   }
 }

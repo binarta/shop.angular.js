@@ -1,0 +1,31 @@
+<div class="bin-shop" ng-init="init()">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
+                <div class="panel panel-success">
+                    <!--<div class="panel-heading" i18n code="shop.order.confirmed.panel.title" read-only>-->
+                    <div class="panel-heading">
+                        <i class="fa fa-smile-o fa-fw"></i> ???header???
+                    </div>
+                    <!--<div class="panel-body" ng-controller="AccountMetadataController">-->
+                        <!--<p i18n code="shop.order.confirmed.message" read-only>-->
+                            <!--{{::var}}-->
+                        <!--</p>-->
+
+                        <!--<p ng-if="::metadata.email"-->
+                           <!--i18n code="shop.order.confirmed.communication.message" read-only>-->
+                            <!--{{::var}} <strong>{{::metadata.email}}</strong>-->
+                        <!--</p>-->
+                    <!--</div>-->
+                    <div class="panel-body">
+                        <p class="error" ng-repeat="v in violations['mandate']">
+                            <i18n code="mandate.{{v.label}}" default="{{v.description}}">
+                                {{v.code}}: {{var}}
+                            </i18n>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

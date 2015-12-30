@@ -108,6 +108,31 @@
                 </div>
             </div>
         </div>
+        <%if(paypal) {%>
+        <div class="row">
+            <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-lg-8 col-lg-offset-2">
+                <select ng-model="ppoc.form.paymentProvider">
+                    <option ng-repeat="method in ppoc.availablePaymentMethods" value="{{method}}">{{method}}</option>
+                </select>
+                <div class="panel panel-info" ng-if="ppoc.form.paymentProvider == 'wire-transfer'">
+                    <div class="panel-heading" i18n code="shop.payment.wire.transfer.restriction.title" read-only>
+                        <i class="fa fa-info-circle fa-fw"></i> {{::var}}
+                    </div>
+                    <div class="panel-body" i18n code="shop.payment.wire.transfer.restriction.message" read-only>
+                        {{::var}}
+                    </div>
+                </div>
+                <div class="panel panel-info" ng-if="ppoc.form.paymentProvider == 'paypal-classic'">
+                    <div class="panel-heading" i18n code="shop.payment.paypal.restriction.title" read-only>
+                        <i class="fa fa-info-circle fa-fw"></i> {{::var}}
+                    </div>
+                    <div class="panel-body" i18n code="shop.payment.paypal.restriction.message" read-only>
+                        {{::var}}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <%} else {%>
         <div class="row">
             <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-lg-8 col-lg-offset-2">
                 <div class="panel panel-info">
@@ -120,6 +145,7 @@
                 </div>
             </div>
         </div>
+        <%}%>
         <div class="row">
             <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-lg-8 col-lg-offset-2">
                 <div class="terms-agreement-message">
