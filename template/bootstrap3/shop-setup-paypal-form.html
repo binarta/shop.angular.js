@@ -8,7 +8,8 @@
             <div class="col-xs-12 col-sm-6">
                 <input type="text" class="form-control" id="config-paypal-subject"
                        name="config-paypal-subject"
-                       ng-model="paypal.fsm.status.subject">
+                       ng-model="paypal.fsm.status.subject"
+                       ng-disabled="paypal.fsm.status.name == 'configured'">
             </div>
         </div>
     </div>
@@ -19,6 +20,11 @@
                 i18n code="shop.save.button" read-only>
             <span ng-show="paypal.fsm.status.name != 'working'"><i class="fa fa-check-circle fa-fw"></i></span>
             <span ng-show="paypal.fsm.status.name == 'working'"><i class="fa fa-spinner fa-spin fa-fw"></i></span>
+            {{::var}}
+        </button>
+        <button type="button" class="btn btn-success" ng-if="paypal.fsm.status.name == 'configured'"
+                ng-click="paypal.fsm.status.reset()"
+                i18n code="shop.paypal.reset.button" read-only>
             {{::var}}
         </button>
     </div>
