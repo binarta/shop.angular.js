@@ -1,19 +1,14 @@
 <form name="form" ng-controller="SetupPaypalController as paypal" ng-init="paypal.fsm.status.refresh()" ng-submit="paypal.fsm.status.submit()">
     <div class="form-group" ng-class="{'has-error': form['config-paypal-subject'].$invalid}">
-        <label i18n code="shop.paypal.setup.subject.label" read-only for="config-paypal-subject">
-            {{::var}} {{paypal.fsm.status.name}}
+        <label for="config-paypal-subject" i18n code="shop.paypal.setup.subject.label" read-only ng-bind="::var">
         </label>
-
-        <div class="row">
-            <div class="col-xs-12 col-sm-6">
-                <input type="text" class="form-control" id="config-paypal-subject"
-                       name="config-paypal-subject"
-                       ng-model="paypal.fsm.status.subject"
-                       ng-disabled="paypal.fsm.status.name == 'configured'">
-            </div>
-        </div>
+        <input type="email" class="form-control" id="config-paypal-subject"
+               i18n code="shop.paypal.setup.subject.placeholder" read-only
+               placeholder="{{::var}}"
+               name="config-paypal-subject"
+               ng-model="paypal.fsm.status.subject"
+               ng-disabled="paypal.fsm.status.name == 'configured'">
     </div>
-
 
     <div class="form-group">
         <button type="submit" class="btn btn-success" ng-disabled="paypal.fsm.status.name == 'working'"
@@ -27,5 +22,8 @@
                 i18n code="shop.paypal.reset.button" read-only>
             {{::var}}
         </button>
+        <p class="help-block" i18n code="shop.paypal.setup.subject.info" read-only>
+            <i class="fa fa-info-circle"></i> <span ng-bind-html="::var"></span>
+        </p>
     </div>
 </form>
