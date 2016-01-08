@@ -1,4 +1,11 @@
 <form name="form" ng-controller="SetupPaypalController as paypal" ng-init="paypal.fsm.status.refresh()" ng-submit="paypal.fsm.status.submit()">
+    <div ng-if="paypal.fsm.status.violations.mandate">
+        <div class="alert alert-info" i18n code="shop.paypal.upstream.error" read-only>{{::var}}</div>
+        <div ng-repeat="v in paypal.fsm.status.violations.mandate" class="alert alert-danger" role="alert">
+            {{v.code}}: {{v.description}}
+        </div>
+    </div>
+
     <div class="form-group" ng-class="{'has-error': form['config-paypal-subject'].$invalid}">
         <label for="config-paypal-subject" i18n code="shop.paypal.setup.subject.label" read-only ng-bind="::var">
         </label>
