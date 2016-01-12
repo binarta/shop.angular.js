@@ -111,23 +111,23 @@
         <%if(paypal) {%>
         <div class="row">
             <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-lg-8 col-lg-offset-2">
-                <select ng-model="ppoc.form.paymentProvider">
-                    <option ng-repeat="method in ppoc.availablePaymentMethods" value="{{method}}">{{method}}</option>
-                </select>
-                <div class="panel panel-info" ng-if="ppoc.form.paymentProvider == 'wire-transfer'">
-                    <div class="panel-heading" i18n code="shop.payment.wire.transfer.restriction.title" read-only>
-                        <i class="fa fa-info-circle fa-fw"></i> {{::var}}
+                <div class="panel panel-default">
+                    <div class="panel-heading" i18n code="shop.payment.method.panel.title" read-only>
+                        <i class="fa fa-credit-card-alt fa-fw"></i> {{::var}}
                     </div>
-                    <div class="panel-body" i18n code="shop.payment.wire.transfer.restriction.message" read-only>
-                        {{::var}}
-                    </div>
-                </div>
-                <div class="panel panel-info" ng-if="ppoc.form.paymentProvider == 'paypal-classic'">
-                    <div class="panel-heading" i18n code="shop.payment.paypal.restriction.title" read-only>
-                        <i class="fa fa-info-circle fa-fw"></i> {{::var}}
-                    </div>
-                    <div class="panel-body" i18n code="shop.payment.paypal.restriction.message" read-only>
-                        {{::var}}
+                    <div class="panel-body">
+                        <div ng-repeat="method in ppoc.availablePaymentMethods">
+                            <div class="radio">
+                                <label i18n code="purchase.orders.payment.method.{{::method}}" read-only>
+                                    <input type="radio" name="availablePaymentMethods" ng-value="::method" ng-model="ppoc.form.paymentProvider">
+                                    {{::var}}
+                                </label>
+
+                                <small i18n code="shop.payment.wire.transfer.restriction.message" read-only ng-if="::method == 'wire-transfer'">
+                                    - {{::var}}
+                                </small>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
