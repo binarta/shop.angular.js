@@ -33,6 +33,33 @@
     }
   }
 
+  &.bin-shop-fullscreen {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1050;
+
+    &:before {
+      content: ' ';
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background-color: rgba(0,0,0,0.6);
+    }
+
+    .container {
+      position: fixed;
+      top: 50%;
+      right: 0;
+      left: 0;
+      transform: translateY(-50%);
+    }
+  }
+
   @media (max-width: 767px) {
     .bin-basket-items {
       .bin-basket-item {

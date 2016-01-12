@@ -60,7 +60,6 @@
       "shop.payment.provider.permission.approved.title": "Completing payment integration setup!",
       "shop.payment.provider.permission.canceled.title": "Canceled payment integration setup!",
       "shop.payment.provider.permission.canceled.body": "PayPal integration has been canceled. If you wish to try again you can do so from the site settings in the user menu.",
-      "shop.approve.payment.title": "Redirecting to payment provider!",
       "shop.payment.approved.title": "Finalizing your order!",
       "shop.payment.canceled.title": "Canceling your order!"
     }, "en":{
@@ -123,7 +122,6 @@
       "shop.payment.provider.permission.approved.title": "Completing payment integration setup!",
       "shop.payment.provider.permission.canceled.title": "Canceled payment integration setup!",
       "shop.payment.provider.permission.canceled.body": "PayPal integration has been canceled. If you wish to try again you can do so from the site settings in the user menu.",
-      "shop.approve.payment.title": "Redirecting to payment provider!",
       "shop.payment.approved.title": "Finalizing your order!",
       "shop.payment.canceled.title": "Canceling your order!"
     }, "fr":{
@@ -186,7 +184,6 @@
       "shop.payment.provider.permission.approved.title": "Completing payment integration setup!",
       "shop.payment.provider.permission.canceled.title": "Canceled payment integration setup!",
       "shop.payment.provider.permission.canceled.body": "PayPal integration has been canceled. If you wish to try again you can do so from the site settings in the user menu.",
-      "shop.approve.payment.title": "Redirecting to payment provider!",
       "shop.payment.approved.title": "Finalizing your order!",
       "shop.payment.canceled.title": "Canceling your order!"
     }, "de":{
@@ -249,7 +246,6 @@
       "shop.payment.provider.permission.approved.title": "Completing payment integration setup!",
       "shop.payment.provider.permission.canceled.title": "Canceled payment integration setup!",
       "shop.payment.provider.permission.canceled.body": "PayPal integration has been canceled. If you wish to try again you can do so from the site settings in the user menu.",
-      "shop.approve.payment.title": "Redirecting to payment provider!",
       "shop.payment.approved.title": "Finalizing your order!",
       "shop.payment.canceled.title": "Canceling your order!"
     }
