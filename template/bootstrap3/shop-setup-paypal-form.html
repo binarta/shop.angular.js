@@ -1,41 +1,51 @@
 <form name="form" ng-controller="SetupPaypalController as paypal" ng-init="paypal.fsm.status.refresh()" ng-submit="paypal.fsm.status.submit()">
     <div ng-if="paypal.fsm.status.violations.mandate">
-        <div class="alert alert-info" i18n code="shop.paypal.upstream.error" read-only>{{::var}}</div>
+        <div class="alert alert-info" i18n code="shop.paypal.setup.upstream.error" read-only>{{::var}}</div>
         <div ng-repeat="v in paypal.fsm.status.violations.mandate" class="alert alert-danger" role="alert">
             {{v.code}}: {{v.description}}
         </div>
     </div>
 
-    <div class="form-group" ng-class="{'has-error': form['config-paypal-subject'].$invalid}">
-        <label for="config-paypal-subject" i18n code="shop.paypal.setup.subject.label" read-only ng-bind="::var">
-        </label>
-        <input type="email" class="form-control" id="config-paypal-subject"
-               i18n code="shop.paypal.setup.subject.placeholder" read-only
-               placeholder="{{::var}}"
-               name="config-paypal-subject"
-               ng-model="paypal.fsm.status.subject"
-               ng-disabled="paypal.fsm.status.name == 'configured'">
+    <div ng-if="paypal.fsm.status.name == 'configured'">
+        <p i18n code="shop.paypal.setup.configured.prefix" read-only>
+            {{::var}} <strong>{{paypal.fsm.status.subject}}</strong>.
+        </p>
+
+        <button type="button" class="btn btn-success" ng-click="paypal.fsm.status.reset()"
+                i18n code="shop.paypal.setup.edit.button" read-only ng-bind="::var">
+        </button>
     </div>
 
-    <div class="form-group">
-        <button type="submit" class="btn btn-success" ng-disabled="paypal.fsm.status.name == 'working'"
-                i18n code="shop.save.button" read-only>
-            <span ng-show="paypal.fsm.status.name != 'working'"><i class="fa fa-check-circle fa-fw"></i></span>
-            <span ng-show="paypal.fsm.status.name == 'working'"><i class="fa fa-spinner fa-spin fa-fw"></i></span>
-            {{::var}}
-        </button>
-        <button type="button" class="btn btn-success" ng-if="paypal.fsm.status.name == 'configured'"
-                ng-click="paypal.fsm.status.reset()"
-                i18n code="shop.paypal.reset.button" read-only>
-            {{::var}}
-        </button>
-        <button type="button" class="btn btn-success" ng-if="paypal.fsm.status.name == 'configured'"
-                ng-click="paypal.fsm.status.disable()"
-                i18n code="shop.paypal.disable.button" read-only>
-            {{::var}}
-        </button>
-        <p class="help-block" i18n code="shop.paypal.setup.subject.info" read-only>
-            <i class="fa fa-info-circle"></i> <span ng-bind-html="::var"></span>
-        </p>
+    <div ng-if="paypal.fsm.status.name != 'configured'">
+        <div class="form-group" ng-class="{'has-error': form['config-paypal-subject'].$invalid}">
+            <label for="config-paypal-subject" i18n code="shop.paypal.setup.subject.label" read-only ng-bind="::var">
+            </label>
+            <input type="email" class="form-control" id="config-paypal-subject"
+                   i18n code="shop.paypal.setup.subject.placeholder" read-only
+                   placeholder="{{::var}}"
+                   name="config-paypal-subject"
+                   ng-model="paypal.fsm.status.subject">
+        </div>
+        <div class="form-group">
+            <button type="submit" class="btn btn-success" ng-disabled="paypal.fsm.status.name == 'working'"
+                    i18n code="shop.save.button" read-only>
+                <span ng-show="paypal.fsm.status.name != 'working'"><i class="fa fa-check-circle fa-fw"></i></span>
+                <span ng-show="paypal.fsm.status.name == 'working'"><i class="fa fa-spinner fa-spin fa-fw"></i></span>
+                {{::var}}
+            </button>
+            <button type="button" class="btn btn-default" ng-click="paypal.fsm.status.cancel()"
+                    i18n code="shop.paypal.setup.cancel.button" read-only ng-bind="::var">
+            </button>
+        </div>
     </div>
+
+    <p class="help-block" i18n code="shop.paypal.setup.subject.info" read-only>
+        <i class="fa fa-info-circle"></i> <span ng-bind-html="::var"></span>
+    </p>
+    <p ng-if="paypal.fsm.status.name == 'configured'" i18n code="shop.paypal.setup.disable.message" read-only>
+        {{::var}}
+        <strong>
+            <a href="" ng-click="paypal.fsm.status.disable()" i18n code="shop.paypal.setup.disable.link" read-only ng-bind="::var"></a>
+        </strong>
+    </p>
 </form>
