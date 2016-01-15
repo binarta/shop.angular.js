@@ -61,7 +61,7 @@
       "shop.paypal.reset.button":"Reset",
       "shop.payment.provider.permission.title": "Payment integration",
       "shop.payment.provider.permission.approved.title": "Payment integration approved.",
-      "shop.payment.provider.permission.canceled.title": "Payment integration has been canceled."
+      "shop.payment.provider.permission.canceled.title": "Payment integration has been canceled.",
       "shop.paypal.disable.button":"Disable"
     }, "en":{
       "shop.basket.title": "Basket",
@@ -124,7 +124,7 @@
       "shop.paypal.reset.button":"Reset",
       "shop.payment.provider.permission.title": "Payment integration",
       "shop.payment.provider.permission.approved.title": "Payment integration approved.",
-      "shop.payment.provider.permission.canceled.title": "Payment integration has been canceled."
+      "shop.payment.provider.permission.canceled.title": "Payment integration has been canceled.",
       "shop.paypal.disable.button":"Disable"
     }, "fr":{
       "shop.basket.title": "Basket",
@@ -187,7 +187,7 @@
       "shop.paypal.reset.button":"Reset",
       "shop.payment.provider.permission.title": "Payment integration",
       "shop.payment.provider.permission.approved.title": "Payment integration approved.",
-      "shop.payment.provider.permission.canceled.title": "Payment integration has been canceled."
+      "shop.payment.provider.permission.canceled.title": "Payment integration has been canceled.",
       "shop.paypal.disable.button":"Disable"
     }, "de":{
       "shop.basket.title": "Basket",
@@ -250,7 +250,7 @@
       "shop.paypal.reset.button":"Reset",
       "shop.payment.provider.permission.title": "Payment integration",
       "shop.payment.provider.permission.approved.title": "Payment integration approved.",
-      "shop.payment.provider.permission.canceled.title": "Payment integration has been canceled."
+      "shop.payment.provider.permission.canceled.title": "Payment integration has been canceled.",
       "shop.paypal.disable.button":"Disable"
     }
   }
