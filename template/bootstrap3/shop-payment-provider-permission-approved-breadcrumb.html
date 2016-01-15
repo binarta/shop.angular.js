@@ -1,0 +1,23 @@
+<section id="breadcrumb">
+    <div class="container">
+        <div class="row">
+            <ol class="breadcrumb" ng-if="viewport.xs">
+                <li>
+                    <a ng-href="#!{{::localePrefix}}/site-settings" i18n code="clerk.menu.site.settings.link" read-only>
+                        <i class="fa fa-angle-left fa-fw"></i> {{::var}}
+                    </a>
+                </li>
+            </ol>
+            <ol class="breadcrumb" ng-if="!viewport.xs">
+                <li>
+                    <a ng-href="#!{{::localePrefix}}/site-settings" i18n code="clerk.menu.site.settings.link" read-only>
+                        {{::var}}
+                    </a>
+                </li>
+                <li i18n code="shop.payment.provider.permission.title" read-only>
+                    {{::var}}
+                </li>
+            </ol>
+        </div>
+    </div>
+</section>

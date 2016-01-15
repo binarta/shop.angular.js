@@ -57,9 +57,9 @@
       "shop.paypal.setup.subject.placeholder":"e-mail",
       "shop.paypal.setup.subject.info":"Activeer hier de PayPal betalingsmogelijkheid voor jouw klanten. <br><small>Je hebt hiervoor een <a href=\"https://www.paypal.com\" target=\"_blank\">zakelijke PayPal account</a> nodig.</small>",
       "shop.paypal.reset.button":"Reset",
-      "shop.payment.provider.permission.approved.title": "Completing payment integration setup!",
-      "shop.payment.provider.permission.canceled.title": "Canceled payment integration setup!",
-      "shop.payment.provider.permission.canceled.body": "PayPal integration has been canceled. If you wish to try again you can do so from the site settings in the user menu.",
+      "shop.payment.provider.permission.title": "Payment integration",
+      "shop.payment.provider.permission.approved.title": "Payment integration approved.",
+      "shop.payment.provider.permission.canceled.title": "Payment integration has been canceled.",
       "shop.payment.approved.title": "Finalizing your order!",
       "shop.payment.canceled.title": "Canceling your order!"
     }, "en":{
@@ -119,9 +119,9 @@
       "shop.paypal.setup.subject.placeholder":"email",
       "shop.paypal.setup.subject.info":"Activate the PayPal payment option for your customers. <br><small>For this, you need a <a href=\"https://www.paypal.com\" target=\"_blank\">PayPal business account</a>.</small>",
       "shop.paypal.reset.button":"Reset",
-      "shop.payment.provider.permission.approved.title": "Completing payment integration setup!",
-      "shop.payment.provider.permission.canceled.title": "Canceled payment integration setup!",
-      "shop.payment.provider.permission.canceled.body": "PayPal integration has been canceled. If you wish to try again you can do so from the site settings in the user menu.",
+      "shop.payment.provider.permission.title": "Payment integration",
+      "shop.payment.provider.permission.approved.title": "Payment integration approved.",
+      "shop.payment.provider.permission.canceled.title": "Payment integration has been canceled.",
       "shop.payment.approved.title": "Finalizing your order!",
       "shop.payment.canceled.title": "Canceling your order!"
     }, "fr":{
@@ -181,9 +181,9 @@
       "shop.paypal.setup.subject.placeholder":"email",
       "shop.paypal.setup.subject.info":"Activate the PayPal payment option for your customers. <br><small>For this, you need a <a href=\"https://www.paypal.com\" target=\"_blank\">PayPal business account</a>.</small>",
       "shop.paypal.reset.button":"Reset",
-      "shop.payment.provider.permission.approved.title": "Completing payment integration setup!",
-      "shop.payment.provider.permission.canceled.title": "Canceled payment integration setup!",
-      "shop.payment.provider.permission.canceled.body": "PayPal integration has been canceled. If you wish to try again you can do so from the site settings in the user menu.",
+      "shop.payment.provider.permission.title": "Payment integration",
+      "shop.payment.provider.permission.approved.title": "Payment integration approved.",
+      "shop.payment.provider.permission.canceled.title": "Payment integration has been canceled.",
       "shop.payment.approved.title": "Finalizing your order!",
       "shop.payment.canceled.title": "Canceling your order!"
     }, "de":{
@@ -243,9 +243,9 @@
       "shop.paypal.setup.subject.placeholder":"email",
       "shop.paypal.setup.subject.info":"Activate the PayPal payment option for your customers. <br><small>For this, you need a <a href=\"https://www.paypal.com\" target=\"_blank\">PayPal business account</a>.</small>",
       "shop.paypal.reset.button":"Reset",
-      "shop.payment.provider.permission.approved.title": "Completing payment integration setup!",
-      "shop.payment.provider.permission.canceled.title": "Canceled payment integration setup!",
-      "shop.payment.provider.permission.canceled.body": "PayPal integration has been canceled. If you wish to try again you can do so from the site settings in the user menu.",
+      "shop.payment.provider.permission.title": "Payment integration",
+      "shop.payment.provider.permission.approved.title": "Payment integration approved.",
+      "shop.payment.provider.permission.canceled.title": "Payment integration has been canceled.",
       "shop.payment.approved.title": "Finalizing your order!",
       "shop.payment.canceled.title": "Canceling your order!"
     }
