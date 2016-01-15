@@ -1,0 +1,24 @@
+<div class="bin-shop">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
+                <div class="bin-status-visual">
+                    <i class="fa fa-check"></i>
+                </div>
+                <h3 class="bin-status-visual-title" i18n code="shop.order.finalizing.confirmed.title" read-only ng-bind="::var">
+                </h3>
+
+                <div class="well" ng-controller="AccountMetadataController">
+                    <p i18n code="shop.order.finalizing.confirmed.message" read-only>
+                        {{::var}}
+                    </p>
+
+                    <p ng-if="::metadata.email"
+                       i18n code="shop.order.finalizing.confirmed.communication.message" read-only>
+                        {{::var}} <strong>{{::metadata.email}}</strong>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
