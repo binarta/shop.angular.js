@@ -29,6 +29,11 @@
                 i18n code="shop.paypal.reset.button" read-only>
             {{::var}}
         </button>
+        <button type="button" class="btn btn-success" ng-if="paypal.fsm.status.name == 'configured'"
+                ng-click="paypal.fsm.status.disable()"
+                i18n code="shop.paypal.disable.button" read-only>
+            {{::var}}
+        </button>
         <p class="help-block" i18n code="shop.paypal.setup.subject.info" read-only>
             <i class="fa fa-info-circle"></i> <span ng-bind-html="::var"></span>
         </p>
