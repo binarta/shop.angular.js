@@ -6,17 +6,17 @@
         </div>
     </div>
 
-    <div class="form-group" ng-if="paypal.fsm.status.name == 'configured'">
-        <p i18n code="shop.paypal.setup.configured.prefix" read-only>
-            {{::var}} <strong>{{paypal.fsm.status.subject}}</strong>.
-        </p>
+    <!--<div class="form-group" ng-if="paypal.fsm.status.name == 'configured'">-->
+        <!--<p i18n code="shop.paypal.setup.configured.prefix" read-only>-->
+            <!--{{::var}} <strong>{{paypal.fsm.status.subject}}</strong>.-->
+        <!--</p>-->
 
-        <button type="button" class="btn btn-success" ng-click="paypal.fsm.status.reset()"
-                i18n code="shop.paypal.setup.edit.button" read-only ng-bind="::var">
-        </button>
-    </div>
+        <!--<button type="button" class="btn btn-success" ng-click="paypal.fsm.status.reset()"-->
+                <!--i18n code="shop.paypal.setup.edit.button" read-only ng-bind="::var">-->
+        <!--</button>-->
+    <!--</div>-->
 
-    <div ng-if="paypal.fsm.status.name != 'configured'">
+    <!--<div ng-if="paypal.fsm.status.name == 'awaiting-configuration'">-->
         <div class="form-group" ng-class="{'has-error': form['config-paypal-subject'].$invalid}">
             <label for="config-paypal-subject" i18n code="shop.paypal.setup.subject.label" read-only ng-bind="::var">
             </label>
@@ -33,15 +33,15 @@
                 <span ng-show="paypal.fsm.status.name == 'working'"><i class="fa fa-spinner fa-spin fa-fw"></i></span>
                 {{::var}}
             </button>
-            <button type="button" class="btn btn-default" ng-click="paypal.fsm.status.cancel()"
-                    i18n code="shop.paypal.setup.cancel.button" read-only ng-bind="::var">
-            </button>
+            <!--<button type="button" class="btn btn-default" ng-click="paypal.fsm.status.cancel()"-->
+                    <!--i18n code="shop.paypal.setup.cancel.button" read-only ng-bind="::var">-->
+            <!--</button>-->
         </div>
 
         <p class="help-block" i18n code="shop.paypal.setup.subject.info" read-only>
             <i class="fa fa-info-circle"></i> <span ng-bind-html="::var"></span>
         </p>
-    </div>
+    <!--</div>-->
 
     <div class="alert alert-warning" i18n code="shop.paypal.setup.encoding.warning" read-only>
         <i class="fa fa-exclamation-triangle fa-fw"></i> <span ng-bind-html="::var"></span>
