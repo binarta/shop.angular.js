@@ -6,7 +6,7 @@
         </div>
     </div>
 
-    <div ng-if="paypal.fsm.status.name == 'configured'">
+    <div class="form-group" ng-if="paypal.fsm.status.name == 'configured'">
         <p i18n code="shop.paypal.setup.configured.prefix" read-only>
             {{::var}} <strong>{{paypal.fsm.status.subject}}</strong>.
         </p>
@@ -37,11 +37,16 @@
                     i18n code="shop.paypal.setup.cancel.button" read-only ng-bind="::var">
             </button>
         </div>
+
+        <p class="help-block" i18n code="shop.paypal.setup.subject.info" read-only>
+            <i class="fa fa-info-circle"></i> <span ng-bind-html="::var"></span>
+        </p>
     </div>
 
-    <p class="help-block" i18n code="shop.paypal.setup.subject.info" read-only>
-        <i class="fa fa-info-circle"></i> <span ng-bind-html="::var"></span>
-    </p>
+    <div class="alert alert-warning" i18n code="shop.paypal.setup.encoding.warning" read-only>
+        <i class="fa fa-exclamation-triangle fa-fw"></i> <span ng-bind-html="::var"></span>
+    </div>
+
     <p ng-if="paypal.fsm.status.name == 'configured'" i18n code="shop.paypal.setup.disable.message" read-only>
         {{::var}}
         <strong>
