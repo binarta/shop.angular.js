@@ -14,8 +14,5 @@
     "customer.profile": "bower_components/binarta.customer.profile.angular/src/main/customer.profile.js",
     "checkpoint.recaptcha":"bower_components/binarta.checkpoint.recaptcha.angular/src/checkpoint.recaptcha.js",
     "angular.recaptcha":"bower_components/angular-recaptcha/release/angular-recaptcha.min.js"
-  },
-  "paypal": {
-    "shop.templates": "bower_components/binarta.shop.angular/src/paypal-tpls-bootstrap3.js"
   }
 }
