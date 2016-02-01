@@ -13,7 +13,6 @@ var minifyHtmlOpts = {
 
 gulp.task('shop-bootstrap3', function () {
     gulp.src('template/bootstrap3/*.html')
-        .pipe(template({paypal: false}))
         .pipe(minifyHtml(minifyHtmlOpts))
         .pipe(templateCache('shop-tpls-bootstrap3.js', {standalone: true, module: 'shop.templates'}))
         .pipe(gulp.dest('src'));
