@@ -1,14 +1,6 @@
 {
   "shop": {
-    "checkpoint.templates": "bower_components/binarta.checkpoint.angular/src/main/js/checkpoint-shop-tpls-bootstrap3.js",
     "shop": "bower_components/binarta.shop.angular/src/shop.js",
-    "shop.templates": "bower_components/binarta.shop.angular/src/shop-tpls-bootstrap3.js",
-    "basket": "bower_components/binarta.basket.angular/src/basket.js",
-    "purchase.orders": "bower_components/binarta.purchase.orders.angular/src/main/js/purchase.orders.js",
-    "customer.address": "bower_components/binarta.customer.address/src/main/js/customer.address.js",
-    "customer.address.templates": "bower_components/binarta.customer.address/src/main/js/customer.address-tpls-bootstrap3.js",
-    "customer.profile": "bower_components/binarta.customer.profile.angular/src/main/customer.profile.js",
-    "checkpoint.recaptcha":"bower_components/binarta.checkpoint.recaptcha.angular/src/checkpoint.recaptcha.js",
-    "angular.recaptcha":"bower_components/angular-recaptcha/release/angular-recaptcha.min.js"
+    "shop.templates": "bower_components/binarta.shop.angular/src/shop-tpls-bootstrap3.js"
   }
 }

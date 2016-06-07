@@ -1,12 +1,11 @@
 angular.module('shop', [
-    'ngRoute',
+    'professional.app',
     'basket',
     'purchase.orders',
     'customer.address',
     'customer.address.templates',
     'customer.profile',
     'checkpoint.recaptcha',
-    'vcRecaptcha',
     'shop.templates'
 ]).config(['$routeProvider', function($routeProvider) {
     $routeProvider
