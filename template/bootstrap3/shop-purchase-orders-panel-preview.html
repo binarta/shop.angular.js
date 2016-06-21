@@ -29,9 +29,7 @@
             <div class="col-xs-4">
                 <label i18n code="shop.order.total.label" read-only ng-bind="::var"></label>
             </div>
-            <div class="col-xs-8">
-                {{::item.total / 100 | currency}}
-            </div>
+            <div class="col-xs-8" ng-bind="::item.presentableTotal"></div>
         </div>
         <div class="row panel-row">
             <div class="col-xs-4">

@@ -65,9 +65,7 @@
                                 <div class="col-xs-8" i18n code="{{::item.id}}" read-only>
                                     {{::var}} ({{::item.quantity}})
                                 </div>
-                                <div class="col-xs-4 text-right">
-                                    {{::((item.price / 100) * item.quantity).toFixed(2) | currency}}
-                                </div>
+                                <div class="col-xs-4 text-right" ng-bind="::item.presentablePrice"></div>
                                 <div class="col-xs-12">
                                     <hr>
                                 </div>
@@ -78,9 +76,7 @@
                                     <div class="col-xs-8 col-sm-10" i18n code="shop.prices.subtotal.label" read-only>
                                         <strong>{{::var}}</strong>
                                     </div>
-                                    <div class="col-xs-4 col-sm-2">
-                                        {{(itemTotal / 100).toFixed(2) | currency}}
-                                    </div>
+                                    <div class="col-xs-4 col-sm-2" ng-bind="::presentableItemTotal"></div>
                                 </div>
                                 <div class="row" ng-repeat="item in additionalCharges">
                                     <div class="col-xs-8 col-sm-10"
@@ -88,18 +84,14 @@
                                          read-only>
                                         <strong>{{::var}}</strong>
                                     </div>
-                                    <div class="col-xs-4 col-sm-2">
-                                        {{item.value / 100 | currency}}
-                                    </div>
+                                    <div class="col-xs-4 col-sm-2" ng-bind="::item.presentableValue"></div>
                                 </div>
                                 <div class="row">
                                     <div class="col-xs-8 col-sm-10" i18n code="shop.prices.total.label" read-only>
                                         <strong>{{::var}}</strong>
                                     </div>
                                     <div class="col-xs-4 col-sm-2">
-                                        <div class="basket-total-price">
-                                            {{subTotal / 100 | currency}}
-                                        </div>
+                                        <div class="basket-total-price" ng-bind="::presentablePrice"></div>
                                     </div>
                                 </div>
                             </div>

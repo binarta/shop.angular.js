@@ -44,16 +44,14 @@
                     {{::var}}
                 </th>
                 <td>
-                    <span class="item-price" catalog-item-price="item"></span>
+                    <span class="item-price" ng-bind="::item.presentableUnitPrice"></span>
                 </td>
             </tr>
             <tr ng-if="item.quantity > 1">
                 <th i18n code="shop.item.total.label" read-only>
                     {{::var}}
                 </th>
-                <td>
-                    {{((item.price / 100) * item.quantity).toFixed(2) | currency}}
-                </td>
+                <td ng-bind="item.presentablePrice"></td>
             </tr>
             </tbody>
         </table>
