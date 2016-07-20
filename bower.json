@@ -9,8 +9,8 @@
   ],
   "dependencies": {
     "binarta.professional.app.angular": "0.*.*",
-    "binarta.basket.angular": "v0.*.*",
-    "binarta.purchase.orders.angular": "v1.*.*",
+    "binarta.basket.angular": "git@github.com:binarta/basket.angular.js#cfi",
+    "binarta.purchase.orders.angular": "git@github.com:binarta/purchase.orders.angular.js#cfi",
     "binarta.customer.address": "v0.*.*",
     "binarta.customer.profile.angular": "v0.*.*",
     "binarta.checkpoint.recaptcha.angular": "v0.*.*"
@@ -21,5 +21,12 @@
     "bower_components",
     "test",
     "tests"
-  ]
+  ],
+  "resolutions": {
+    "angular-cookies": "1.5.*",
+    "angular-resource": "1.5.*",
+    "angular-sanitize": "1.5.*",
+    "angular-touch": "1.5.*",
+    "angular": "1.5.*"
+  }
 }
