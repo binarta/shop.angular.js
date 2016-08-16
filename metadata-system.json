@@ -65,7 +65,8 @@
       "shop.paypal.setup.upstream.error":"PayPal kan uw verzoek niet verwerken. Meer details vind je hieronder. Als het probleem aanhoudt, neem dan gerust contact op met support.",
       "shop.payment.provider.permission.title": "Integratie van betaalmethode",
       "shop.payment.provider.permission.approved.title": "Integratie van betaalmethode is goedgekeurd.",
-      "shop.payment.provider.permission.canceled.title": "Integratie van betaalmethode is geannuleerd."
+      "shop.payment.provider.permission.canceled.title": "Integratie van betaalmethode is geannuleerd.",
+      "order.summary.insufficient.funds.available":"De door jou gekozen betaal methode kan niet gebruikt worden om deze bestelling te betalen. Gewoonlijk wil dit zeggen dat je geen kredietkaart gekoppeld hebt aan je account of dat je kredietkaart vervallen of geblokkeerd is. Als je geen kredietkaart gebruikt dan is er onvoldoende saldo beschikbaar."
     }, "en":{
       "shop.basket.title": "Basket",
       "shop.checkout.address.title": "Address selection",
@@ -131,7 +132,8 @@
       "shop.paypal.setup.upstream.error":"PayPal could not process your request. Review the details below and if the problem persists feel free to contact support.",
       "shop.payment.provider.permission.title": "Payment integration",
       "shop.payment.provider.permission.approved.title": "Payment integration approved.",
-      "shop.payment.provider.permission.canceled.title": "Payment integration has been canceled."
+      "shop.payment.provider.permission.canceled.title": "Payment integration has been canceled.",
+      "order.summary.insufficient.funds.available":"The chosen payment method can not be used to pay the order. Usually this means there is no credit card attached to your account or your credit card may have expired or been blocked. If you do not use a credit card then there are insufficient funds available."
     }, "fr":{
       "shop.basket.title": "Basket",
       "shop.checkout.address.title": "Address selection",
@@ -197,7 +199,8 @@
       "shop.paypal.setup.upstream.error":"PayPal could not process your request. Review the details below and if the problem persists feel free to contact support.",
       "shop.payment.provider.permission.title": "Payment integration",
       "shop.payment.provider.permission.approved.title": "Payment integration approved.",
-      "shop.payment.provider.permission.canceled.title": "Payment integration has been canceled."
+      "shop.payment.provider.permission.canceled.title": "Payment integration has been canceled.",
+      "order.summary.insufficient.funds.available":"The chosen payment method can not be used to pay the order. Usually this means there is no credit card attached to your account or your credit card may have expired or been blocked. If you do not use a credit card then there are insufficient funds available."
     }, "de":{
       "shop.basket.title": "Basket",
       "shop.checkout.address.title": "Address selection",
@@ -263,7 +266,8 @@
       "shop.paypal.setup.upstream.error":"PayPal could not process your request. Review the details below and if the problem persists feel free to contact support.",
       "shop.payment.provider.permission.title": "Payment integration",
       "shop.payment.provider.permission.approved.title": "Payment integration approved.",
-      "shop.payment.provider.permission.canceled.title": "Payment integration has been canceled."
+      "shop.payment.provider.permission.canceled.title": "Payment integration has been canceled.",
+      "order.summary.insufficient.funds.available":"The chosen payment method can not be used to pay the order. Usually this means there is no credit card attached to your account or your credit card may have expired or been blocked. If you do not use a credit card then there are insufficient funds available."
     }
   }
 }
