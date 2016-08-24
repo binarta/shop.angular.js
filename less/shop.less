@@ -1,3 +1,20 @@
+.bin-checkout-body {
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+  .panel {
+    .panel-heading {
+      position: relative;
+      .btn {
+        position: absolute;
+        top: 7px;
+        right: 15px;
+      }
+    }
+  }
+}
+
+// @deprecated - name is too generic and definition is too specific
 .bin-shop {
   padding-bottom: 10px;
 
@@ -96,6 +113,43 @@
       position: absolute;
       top: 9px;
       right: 9px;
+    }
+  }
+
+  @media (max-width: 767px) {
+    .bin-basket-items {
+      .bin-basket-item {
+        .item-image {
+          width: 100px;
+          float: left;
+        }
+
+        .caption {
+          margin-left: 100px + 4px;
+
+          .item-title {
+            margin-top: 0;
+          }
+        }
+      }
+    }
+  }
+
+  @media (min-width: 768px) {
+    padding-bottom: 50px;
+
+    .bin-basket-items {
+      .bin-basket-item {
+        .item-image {
+          img {
+            max-height: 120px;
+          }
+        }
+      }
+    }
+
+    .terms-agreement-message {
+      text-align: right;
     }
   }
 }
