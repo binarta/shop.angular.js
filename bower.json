@@ -9,7 +9,7 @@
   ],
   "dependencies": {
     "binarta.professional.app.angular": "0.*.*",
-    "binarta.purchase.orders.angular": "git@github.com:binarta/purchase.orders.angular.js#cfi",
+    "binarta.purchase.orders.angular": "2.*.*",
     "binarta.customer.address": "v0.*.*",
     "binarta.customer.profile.angular": "v0.*.*",
     "binarta.checkpoint.recaptcha.angular": "v0.*.*"
