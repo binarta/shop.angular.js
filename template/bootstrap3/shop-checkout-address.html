@@ -10,7 +10,7 @@
                         <div class="panel panel-default">
                             <div class="panel-heading" i18n code="shop.billing.address.panel.title" read-only>
                                 <i class="fa fa-home fa-fw"></i> {{::var}}
-                                <a ng-href="#!{{::localePrefix}}/address/add?&redirectTo={{::unlocalizedPath}}"
+                                <a bin-href="/address/add?&redirectTo={{::unlocalizedPath}}"
                                    ng-if="addresses.length > 0"
                                    class="btn btn-default btn-sm" i18n code="shop.new.button" read-only>
                                     <i class="fa fa-plus fa-fw"></i> {{::var}}
@@ -19,7 +19,7 @@
                             <div class="panel-body">
                                 <form>
                                     <div class="form-group text-center" ng-if="addresses.length == 0">
-                                        <a ng-href="#!{{::localePrefix}}/address/add?&redirectTo={{::unlocalizedPath}}"
+                                        <a bin-href="/address/add?&redirectTo={{::unlocalizedPath}}"
                                            class="btn btn-default" i18n code="shop.new.address.button" read-only>
                                             <i class="fa fa-plus fa-fw"></i> {{::var}}
                                         </a>
@@ -33,7 +33,7 @@
                                          ng-repeat="address in addresses | filter:{label:selection.billing.label}:true">
                                         <hr>
                                         <a class="btn btn-default btn-sm pull-right"
-                                           ng-href="#!{{::localePrefix}}/address/{{::address.label}}?redirectTo={{::unlocalizedPath}}"
+                                           bin-href="/address/{{::address.label}}?redirectTo={{::unlocalizedPath}}"
                                            i18n code="shop.edit.button" read-only>
                                             <i class="fa fa-pencil fa-fw"></i> {{::var}}
                                         </a>
@@ -55,7 +55,7 @@
                             <div class="panel-heading"
                                  i18n code="shop.shipping.address.panel.title" read-only>
                                 <i class="fa fa-home fa-fw"></i> {{::var}}
-                                <a ng-href="#!{{::localePrefix}}/address/add?&redirectTo={{::unlocalizedPath}}"
+                                <a bin-href="/address/add?&redirectTo={{::unlocalizedPath}}"
                                    ng-if="addresses.length > 0"
                                    class="btn btn-default btn-sm" i18n code="shop.new.button" read-only>
                                     <i class="fa fa-plus fa-fw"></i> {{::var}}
@@ -64,7 +64,7 @@
                             <div class="panel-body">
                                 <form>
                                     <div class="form-group text-center" ng-if="addresses.length == 0">
-                                        <a ng-href="#!{{::localePrefix}}/address/add?&redirectTo={{::unlocalizedPath}}"
+                                        <a bin-href="/address/add?&redirectTo={{::unlocalizedPath}}"
                                            class="btn btn-default" i18n code="shop.new.address.button" read-only>
                                             <i class="fa fa-plus fa-fw"></i> {{::var}}
                                         </a>
@@ -78,7 +78,7 @@
                                          ng-repeat="address in addresses | filter:{label:selection.shipping.label}:true">
                                         <hr>
                                         <a class="btn btn-default btn-sm pull-right"
-                                           ng-href="#!{{::localePrefix}}/address/{{::address.label}}?redirectTo={{::unlocalizedPath}}"
+                                           bin-href="/address/{{::address.label}}?redirectTo={{::unlocalizedPath}}"
                                            i18n code="shop.edit.button" read-only>
                                             <i class="fa fa-pencil fa-fw"></i> {{::var}}
                                         </a>
@@ -98,7 +98,7 @@
                 <div class="row">
                     <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-lg-8 col-lg-offset-2">
                         <hr>
-                        <a ng-href="#!{{localePrefix}}/basket" class="btn btn-default"
+                        <a bin-href="/basket" class="btn btn-default"
                            i18n code="shop.back.button" read-only>
                             <i class="fa fa-caret-left fa-fw"></i> {{::var}}
                         </a>

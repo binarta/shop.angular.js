@@ -16,7 +16,7 @@
                             <div class="form-group">
                                 <label i18n code="checkpoint.password.label" read-only ng-bind="::var"></label>
                                 <div>
-                                    <a ng-href="#!{{::localePrefix}}/changemypassword" i18n code="checkpoint.change.password.title" read-only>{{::var}}</a>
+                                    <a bin-href="/changemypassword" i18n code="checkpoint.change.password.title" read-only>{{::var}}</a>
                                 </div>
                                 <hr>
                             </div>
@@ -44,7 +44,7 @@
                 <div class="panel panel-default" ng-controller="CustomerAddressController" ng-init="init()">
                     <div class="panel-heading" i18n code="shop.addresses.panel.title" read-only>
                         <i class="fa fa-home fa-fw"></i> {{::var}}
-                        <a ng-href="#!{{::localePrefix}}/address/add?&redirectTo={{::unlocalizedPath}}"
+                        <a bin-href="/address/add?&redirectTo={{::unlocalizedPath}}"
                            ng-if="addresses.length > 0"
                            class="btn btn-default btn-sm" i18n code="shop.new.button" read-only>
                             <i class="fa fa-plus fa-fw"></i> {{::var}}
@@ -53,7 +53,7 @@
                     <div class="panel-body">
                         <form name="addressForm">
                             <div class="form-group text-center" ng-if="addresses.length == 0">
-                                <a ng-href="#!{{::localePrefix}}/address/add?&redirectTo={{::unlocalizedPath}}"
+                                <a bin-href="/address/add?&redirectTo={{::unlocalizedPath}}"
                                    class="btn btn-default" i18n code="shop.new.address.button" read-only>
                                     <i class="fa fa-plus fa-fw"></i> {{::var}}
                                 </a>
@@ -74,7 +74,7 @@
                                             <i class="fa fa-times fa-fw"></i> {{::var}}
                                         </button>
                                         <a class="btn btn-default btn-sm"
-                                           ng-href="#!{{::localePrefix}}/address/{{::address.label}}?redirectTo={{::unlocalizedPath}}"
+                                           bin-href="/address/{{::address.label}}?redirectTo={{::unlocalizedPath}}"
                                            i18n code="shop.edit.button" read-only>
                                             <i class="fa fa-pencil fa-fw"></i> {{::var}}
                                         </a>

@@ -70,7 +70,7 @@
                     <div class="panel-body">
                         <div class="row" ng-repeat="item in ::viewOrderCtrl.order.items track by item.id">
                             <div class="col-xs-8" i18n code="{{::item.id}}" read-only>
-                                <a ng-href="#!{{::localePrefix}}/view{{::item.id}}">
+                                <a bin-href="/view{{::item.id}}">
                                     {{::var}} ({{::item.quantity}})
                                 </a>
                             </div>

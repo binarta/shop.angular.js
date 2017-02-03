@@ -1,7 +1,7 @@
 <div class="panel panel-default">
     <div class="panel-heading">
         {{::item.creationTime | amDateFormat:'DD-MM-YYYY'}} | {{::item.creationTime | amDateFormat:'HH:mm'}}
-        <a class="btn btn-default btn-sm" ng-href="#!{{::localePrefix}}/order/{{::item.owner}}/{{::item.id}}"
+        <a class="btn btn-default btn-sm" bin-href="/order/{{::item.owner}}/{{::item.id}}"
            i18n code="shop.order.view.details.button" read-only>
             <i class="fa fa-list fa-fw"></i> {{::var}}
         </a>
@@ -12,7 +12,7 @@
                 <label i18n code="shop.order.reference.label" read-only ng-bind="::var"></label>
             </div>
             <div class="col-xs-8">
-                <a ng-href="#!{{::localePrefix}}/order/{{::item.owner}}/{{::item.id}}">
+                <a bin-href="/order/{{::item.owner}}/{{::item.id}}">
                     {{::item.id | limitTo:8}}
                 </a>
             </div>
